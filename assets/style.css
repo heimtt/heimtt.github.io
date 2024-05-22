@@ -44,7 +44,7 @@ img{
 	display: flex;
 }
 .content-wrapper{
-	height: 100vh;
+	/* height: 100vh; */
 	position: relative;
 	overflow: hidden;
 }
@@ -350,9 +350,56 @@ main .section-inner{
 	opacity: 0;
 	transition: .3s;
 }
-.work-details-container .work-details-cont.work-img:hover .swiper-buttons {
+.scroll {
+	display: inline-block;
+	position: absolute;
+	padding: 10px 10px 55px;
+	bottom: 90px;
+	right: 1px;
+	z-index: 10;
+	color: var(--color-base);
+	font-size: 10px;
+	font-family: "Josefin Sans", sans-serif;
+	line-height: 1;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	writing-mode: vertical-lr;
+	opacity: 0;
+	transition: 0.2s;
+}
+.scroll::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 1px;
+	height: 40px;
+	background: var(--color-base);
+	animation: scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+}
+.work-details-container .work-details-cont.work-img:hover .swiper-buttons,
+.work-details-container .work-details-cont.work-img:hover .scroll {
 	opacity: 1;
 }
+@keyframes scroll {
+	0% {
+		transform: scale(1, 0);
+		transform-origin: 0 0;
+	}
+	50% {
+		transform: scale(1, 1);
+		transform-origin: 0 0;
+	}
+	50.1% {
+		transform: scale(1, 1);
+		transform-origin: 0 100%;
+	}
+	100% {
+		transform: scale(1, 0);
+		transform-origin: 0 100%;
+	}
+}
+ 
 .work-details-container .work-info-inner{
 	background: var(--color-sub);
 	width: 100%;
