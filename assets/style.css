@@ -41,8 +41,9 @@ img{
 	color: var(--color-accent);
 }
 .textlink{
-	text-decoration: underline dotted var(--color-accent);
 	word-break: break-all;
+	text-decoration: underline dotted var(--color-accent);
+	-webkit-text-decoration: underline dotted var(--color-accent);
 }
 .flex-wrapper{
 	display: flex;
