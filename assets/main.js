@@ -29,28 +29,28 @@ naviBtns.forEach((naviBtn) => {
 
 //swiper
 const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-  // autoplay: {
-  //   delay: 3000,
-  //   disableOnInteraction: false
-  // },
-  breakpoints: {
-    // when window width is >= 
-    768: {
-      slidesPerView: 1,
-      spaceBetween: 30
-    }
-  },
+	// Optional parameters
+	direction: 'horizontal',
+	loop: true,
+	// autoplay: {
+	// 	delay: 3000,
+	// 	disableOnInteraction: false
+	// },
+	breakpoints: {
+		// when window width is >= 
+		768: {
+			slidesPerView: 1,
+			spaceBetween: 30
+		}
+	},
 
-  // Pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  }
+	// Pagination
+	pagination: {
+		el: '.swiper-pagination',
+	},
+	// Navigation arrows
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	}
 });
